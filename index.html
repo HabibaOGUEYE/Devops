@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accuiel</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default menu">
+		<div class="navbar-header photo">
+			<a class="navbar-brand" href="#">
+				<img src="img/photo.png">
+			</a>				
+		</div>
+		<div>
+			<ul class=" nav navbwar-nav">
+				<li class="" ><a href="student.html">Etudiant</a></li>
+				<li class="" ><a href="mat.html">Matière</a></li>
+				<li class="" ><a href="ep.html">Epreuve</a></li>
+				<li class="" ><a href="no.html">Note</a></li>
+			</ul>	
+		</div>
+	</nav> 
+	
+	<br><br><br>
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Bonjour et bienvenues à tous!</h1>
+			<p>Vous voulez afficher :</p>
+			<br><br>
+			<div class="btn-group">
+				<form action="Etudiant.php" method="POST">
+					<button type="submit" class="btn btn-lg btn-info" name="">Liste des étudiants</button>
+				</form>
+				<form method="POST" action="exreq.php">
+					<button type="submit" class="btn btn-lg btn-dark" name="mati">Liste des matiéres</button>
+				</form>
+				<form action="epreuve.php">
+					<button type="submit" class="btn btn-lg btn-secondary" name="">Liste des épreuves</button>
+				</form>
+				<form action="exreq" method="POST">
+					<button type="submit" class="btn btn-lg btn-warning" name="moyy">Liste des Moyennes</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
