@@ -1,0 +1,43 @@
+/*#05b1fe*/
+
+.navbar-default{
+	background-color: #28D3BB;
+	height: 100px;
+}
+.menu a img {
+	margin-top: -20px;
+}
+
+.menu ul li 
+{
+
+ float:left;
+    display: inline-block;
+}
+.menu ul li a
+{
+	  text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+footer
+{
+    height: 260px;
+    background-color: #444;
+}
+footer h1
+{
+    color:#fff;
+    text-align: center;
+    padding-top: 80px;
+}
+.copyright
+{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    color: #777;
+}
