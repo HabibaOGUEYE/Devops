@@ -1,12 +1,11 @@
 pipeline {
     agent any
 
-    String branchName = env.delivery
-    String gitCredentials = "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"
-    String repoUrl = "https://github.com/HabibaOGUEYE/Devops.git"
-
     stages {
         stage('Recuperation du code sur github') {
+            String branchName = env.delivery
+            String gitCredentials = "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"
+            String repoUrl = "https://github.com/HabibaOGUEYE/Devops.git"
             steps {
             echo 'Make the output directory'
             sh 'mkdir -p build'
