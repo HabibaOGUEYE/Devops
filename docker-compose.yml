@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: powercontainer
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    depends_on:
+      - database-environment
+    volumes:
+      - ./app:/var/www/html/
+    ports:
+      - 8010:80
+  db:
+    image: mysql
+    # NOTE: use of "mysql_native_password" is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
+    # (this is just an example, not intended to be a production configuration)
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  database-environment:
+    container_name: database
+    image: mysql:8.0
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: ''
+        MYSQL_DATABASE: tp
+        MYSQL_USER: root
+        MYSQL_PASSWORD: ''
+    ports:
+        - "9904:3306"
+  phpmyadmin:
+    image: phpmyadmin:5.2.0-apache
+    ports:
+        - '8050:80'
+    restart: always
+    environment:
+        PMA_HOST: database
+    depends_on:
+        - database-environment
