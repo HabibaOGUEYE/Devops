@@ -10,13 +10,13 @@ pipeline {
 
         stage('Build Application Image') {
             steps {
-                    sh 'docker build -t powercontainer .'
+                    sh 'docker build -t 7bc3aa6f56fb .'
                 }
         }
 
         stage('Build Database Image') {
             steps {
-                    sh 'docker build -t database .'
+                    sh 'docker build -t 8593b6a707fc .'
                 }
         }
 
