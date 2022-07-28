@@ -11,7 +11,7 @@ pipeline {
         stage('Build Application Image') {
             steps {
                     echo 'Building the app image ....'
-                    sh 'docker build -t devops_php-apache-environment .'
+                    sh 'docker build -t 7bc3aa6f56fb .'
                 }
         }
 
