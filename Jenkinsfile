@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Application Image') {
             steps {
-                    sh 'docker build -t 7bc3aa6f56fb .'
+                    sh 'docker build -f Dockerfile --tag powercontainer .'
                 }
         }
 
