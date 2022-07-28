@@ -2,10 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-        }
         stage('Recuperation du code sur github') {
             steps {
                 git branch: 'delivery', credentialsId: 'git_credentials', url: 'https://github.com/HabibaOGUEYE/Devops'
