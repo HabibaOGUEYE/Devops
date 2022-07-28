@@ -10,7 +10,6 @@ pipeline {
 
         stage('Build Application Image') {
             steps {
-                dir("Devops/") {
                     sh 'docker build -t powercontainer .'
                 }
             }
@@ -18,7 +17,6 @@ pipeline {
 
         stage('Build Database Image') {
             steps {
-                dir("Devops/") {
                     sh 'docker build -t database .'
                 }
             }
