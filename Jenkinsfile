@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Recuperation du code sur github') {
             steps {
-                git branch: 'delivery', url: 'https://github.com/HabibaOGUEYE/Devops'
+                git branch: 'delivery', url: 'https://github.com/HabibaOGUEYE/Devops.git'
             }
         }
 
