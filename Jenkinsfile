@@ -3,17 +3,8 @@ pipeline {
 
     stages {
         stage('Recuperation du code sur github') {
-            String branchName = env.delivery
-            String gitCredentials = "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"
-            String repoUrl = "https://github.com/HabibaOGUEYE/Devops.git"
             steps {
-            echo 'Make the output directory'
-            sh 'mkdir -p build'
-
-            echo 'Cloning files from (branch: "' + branchName + '" )'
-            dir('build') {
-                git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
-            } 
+                git branch: 'delivery', url: 'https://github.com/HabibaOGUEYE/Devops'
             }
         }
 
