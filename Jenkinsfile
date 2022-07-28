@@ -12,14 +12,12 @@ pipeline {
             steps {
                     sh 'docker build -t powercontainer .'
                 }
-            }
         }
 
         stage('Build Database Image') {
             steps {
                     sh 'docker build -t database .'
                 }
-            }
         }
 
         stage('Docker Compose') {
