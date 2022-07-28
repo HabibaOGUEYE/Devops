@@ -11,7 +11,7 @@ pipeline {
         stage('Build Application Image') {
             steps {
                     echo 'Building the app image ....'
-                    sh 'docker build -f Dockerfile --tag powercontainer .'
+                    sh 'docker build -t devops_php-apache-environment .'
                 }
         }
 
